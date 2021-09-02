@@ -5,7 +5,7 @@ const { API } = process.env;
 const { Generos } = require("../db");
 
 const router = Router();
-
+//algo
 router.get("/generos", async (req, res) => {
     var check = await Generos.findAll()  
     if (check.length === 0){
