@@ -1,9 +1,19 @@
-import './App.css';
+import "./App.css";
+import React from "react";
+import Start from "./components/start.jsx";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Henry Videogames</h1>
+    <div>
+      <Router>
+        <Switch>
+        
+          <Route path={"/"} component={Start}></Route>
+          
+        </Switch>
+      </Router>
     </div>
   );
 }

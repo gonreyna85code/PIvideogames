@@ -14,23 +14,22 @@ module.exports = (sequelize) => {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
       
     },
-    descripcion: {
+    description: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    fechadelanzamiento: {
+    released: {
       type: DataTypes.DATEONLY,
       allowNull: true,
     },
     rating: {
-      type: DataTypes.ENUM('1', '2', '3', '4', '5'),
+      type: DataTypes.DECIMAL,
       allowNull: true,
     },
-    plataformas: {
-      type: DataTypes.STRING,
+    platforms: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
       allowNull: false,
     },
     
