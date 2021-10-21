@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 
 export default function Videogames() {
-    const videogames = useSelector((state) => state.Videogames)
+    const videogames = useSelector((state) => state.Filtrados)
     const [currentPage, setCurrentPage] = useState(0);
-
+    console.log(videogames)
     const next_Page = () => {
         if(videogames.length <= currentPage + 15) {
             setCurrentPage(currentPage);

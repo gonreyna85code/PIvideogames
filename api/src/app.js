@@ -6,6 +6,7 @@ const genresRoute = require('./routes/Genres');
 const videogame = require('./routes/Videogame');
 const videogames = require('./routes/Videogames');
 const videogameid = require('./routes/VideogameID');
+const game = require('./routes/Games');
 const cors = require("cors");
 
 require('./db.js');
@@ -31,6 +32,7 @@ server.use('/', videogameid);
 server.use('/', videogame);
 server.use('/', videogames);
 server.use('/', genresRoute);
+server.use('/', game);
 
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars

@@ -1,9 +1,10 @@
-import {GET_VIDEOGAMES , GET_VIDEOGAME_ID, GET_GENRES} from './actions.js';
+import {GET_VIDEOGAMES , GET_VIDEOGAME_ID, GET_GENRES, GET_SEARCH} from './actions.js';
 
 const initialState = {
     Videogames: [],
     Videogame: {},
     Genres: [],
+    Filtrados: [],
 }
 
 
@@ -18,7 +19,8 @@ function rootReducer(state = initialState, action){
           }
         return {
             ...state,
-            Videogames: action.payload.map(dbid)            
+            Videogames: action.payload.map(dbid),  
+            Filtrados:  action.payload.map(dbid)        
         };
     }
     if(action.type === GET_VIDEOGAME_ID) {
@@ -33,6 +35,12 @@ function rootReducer(state = initialState, action){
             Genres: action.payload            
         };
     }
+    if (action.type === GET_SEARCH) {
+        return {
+          ...state,
+          Filtrados: action.payload 
+        };
+      }
     return state
 }
 
