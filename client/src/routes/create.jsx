@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getGenres, postVideogame } from "../redux/actions.js";
-import icon from "../styles/home.jpg";
+import icon from "../styles/home-create.png";
+import "../styles/create.css";
+import image from "../styles/landing.jpg"
 
 export default function Create() {
   const dispatch = useDispatch();
   const [Videogame, setVideogame] = useState({
-    database_created: true,
+    database_created: 'true',
     platforms: [],
     genres: [],
-    background_image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIQHFxRMkRQ_pYGP08LYht-SdVerOiYm1JGQ&usqp=CAU",
+    background_image: image,
   });
   const platforms = [
     "Xbox360",
@@ -40,7 +41,7 @@ export default function Create() {
       <div>
         <a href="/home" className="icon">
           <div>
-            <img src={icon} alt="" className="img" />
+            <img src={icon} width='60px' height='60px' alt="" className="img" />
           </div>
         </a>
       </div>
@@ -65,6 +66,7 @@ export default function Create() {
           </div>
         </div>
         <div>
+        <label>Genres:&nbsp;</label>
           <select
             id="genres"
             multiple
@@ -84,6 +86,7 @@ export default function Create() {
           </select>
         </div>
         <div>
+        <label>Platforms:&nbsp;</label>
           <select
             id="platforms"
             multiple
@@ -103,6 +106,7 @@ export default function Create() {
           </select>
         </div>
         <div>
+        <label>Release data:&nbsp;</label>
           <input
             type="date"
             onChange={(e) =>
@@ -111,6 +115,7 @@ export default function Create() {
           />
         </div>
         <div>
+        <label>Rating:&nbsp;</label>
           <input
             type="number"
             min="1"
@@ -123,6 +128,7 @@ export default function Create() {
           />
         </div>
         <div>
+        <label>Description:&nbsp;</label>
           <textarea
             name="description"
             id="description"

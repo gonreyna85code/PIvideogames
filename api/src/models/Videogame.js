@@ -32,7 +32,7 @@ module.exports = (sequelize) => {
       type: DataTypes.JSON,
       allowNull: true,
     },
-    db_created: {
+    database_created: {
       type: DataTypes.STRING,
     }
   }, {

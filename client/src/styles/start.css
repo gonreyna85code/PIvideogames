@@ -17,7 +17,8 @@
   top: 51%;
   left: 45.5%;
   background-color:grey;
-  font-size:35px;
+  font-size:33px;
+  border-color: #464646;
 }
 .title{
     color: silver;

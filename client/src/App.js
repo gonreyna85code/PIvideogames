@@ -15,13 +15,13 @@ function App() {
           <Route exact path={"/"} component={start}></Route>          
         </Switch>
         <Switch>        
-          <Route exact path={"/home"} component={home}></Route>          
+          <Route exact path={"/home/"} component={home}></Route>          
         </Switch>
         <Switch>
-          <Route exact path={"/videogame/:id"} component={detail}></Route>
+          <Route exact path={"/videogame/:id/"} component={detail}></Route>
         </Switch>
         <Switch>
-          <Route exact path={"/create"} component={create}></Route>
+          <Route exact path={"/create/"} component={create}></Route>
         </Switch>
       </Router>
     </div>

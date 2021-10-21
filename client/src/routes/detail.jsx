@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import { getVideoGameID } from "../redux/actions.js";
 import { useDispatch, useSelector } from "react-redux";
-import icon from "../styles/home.jpg";
+import icon from "../styles/home-create.png";
+import "../styles/detail.css";
+
 export default function Detail(props) {
   const id = props.match.params.id;
   const videogame = useSelector((state) => state.Videogame);
@@ -17,7 +19,7 @@ export default function Detail(props) {
       <div>
         <a href="/home"  className='detail_icon'>
           <div>
-          <img src={icon} alt="" className="detail_img"/>
+          <img src={icon} alt="" width='60px' height='60px' className="detail_img"/>
           </div>
         </a>
       </div>     
