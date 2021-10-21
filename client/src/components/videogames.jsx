@@ -29,9 +29,9 @@ export default function Videogames() {
     useEffect(() => {
         first_Page()
     }, [videogames]);
-console.log(videogames)
+
     const Filtred_Videogame = videogames.slice(currentPage, currentPage + 15);
-    console.log(videogames.Generos)
+    
     return (
         <div>
             {Filtred_Videogame.length >= 15 ? (

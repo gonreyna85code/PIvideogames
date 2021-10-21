@@ -3,36 +3,38 @@ const { DataTypes } = require('sequelize');
 // Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
   // defino el modelo
-  sequelize.define('videogames', {
-    
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
-      allowNull: false
-    }, 
+  sequelize.define('videogames', {     
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
-      
+      allowNull: false,      
     },
-    description: {
+    description_raw: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     released: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.DATE,
       allowNull: true,
     },
     rating: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.INTEGER,
       allowNull: true,
     },
     platforms: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
+      type: DataTypes.JSON,
+      allowNull: true,
     },
-    
+    background_image: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    genres: {
+      type: DataTypes.JSON,
+      allowNull: true,
+    },
+    db_created: {
+      type: DataTypes.STRING,
+    }
   }, {
     timestamps: false,
   });

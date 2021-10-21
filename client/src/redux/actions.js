@@ -35,7 +35,7 @@ export function getGenres() {
         };
     }
 }
-export function postBreed(videogame) {
+export function postVideogame(videogame) {
   
     return async function (dispatch) {
       try {
