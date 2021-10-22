@@ -51,20 +51,3 @@ export default function Filter() {
       </div>
     );
   }
-
-
-
-
-//   <div className="filter">      
-//         <button className="filtros" type="submit" onClick={() => dispatch(getAbc())}>
-//           Order By Name
-//         </button>
-//         <button className="filtros" type="submit" onClick={() => dispatch(getWeights())}>
-//           Order By Weight
-//         </button>
-//         <button className="filtros" type="submit" onClick={() => dispatch(getDbc())}>
-//           Database Dogs
-//         </button>
-//         <button className="filtros" type="submit" onClick={() => dispatch(getDes())}>
-//           Order ↑↓
-//         </button> 
