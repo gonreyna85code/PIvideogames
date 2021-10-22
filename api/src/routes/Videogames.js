@@ -9,7 +9,7 @@ const router = Router();
 
 router.get("/videogames", async (_req, res) => {
     let gamesdb = await Videogames.findAll();
-    let apiGames = await fetch(`https://api.rawg.io/api/games?key=${API}&page_size=100`)
+    let apiGames = await fetch(`https://api.rawg.io/api/games?key=${API}`)
     .then((response) => response.json());
      let games = await gamesdb.concat(apiGames.results); 
     res.send(games);

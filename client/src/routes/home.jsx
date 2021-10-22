@@ -3,6 +3,7 @@ import { getVideoGame } from "../redux/actions.js";
 import { useDispatch } from "react-redux";
 import Videogames from "../components/videogames.jsx";
 import Navbar from "../components/navbar.jsx";
+import Filter from "../components/filter.jsx";
 import icon from "../styles/home-create.png";
 import "../styles/home.css";
 
@@ -21,6 +22,9 @@ export default function Home() {
           </div>
         </a>
         <Navbar/>
+        <div>
+            <Filter/>
+        </div>
       </div>          
             <div>
                 <Videogames/>

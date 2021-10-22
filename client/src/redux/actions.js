@@ -3,9 +3,31 @@ export const GET_VIDEOGAMES = "GET_VIDEOGAMES",
 GET_VIDEOGAME_ID = 'GET_VIDEOGAME_ID',
 POST_VIDEOGAME = 'POST_VIDEOGAME',
 GET_GENRES = 'GET_GENRES',
+GET_BY_GENRE = 'GET_BY_GENRE',
+GET_BY_DB = 'GET_BY_DB',
+GET_BY_REV = 'GET_BY_REV',
+GET_ABC = 'GET_ABC',
+GET_RATING = 'GET_RATING',
 GET_SEARCH = 'GET_SEARCH';
 
 
+
+
+export function getByGenre(genre) {
+    return { type: "GET_BY_GENRE", payload: genre };
+}
+export function getByDb() {
+    return { type: "GET_BY_DB"};
+}
+export function getAbc() {
+    return { type: "GET_ABC"};
+}
+export function getRating() {
+    return { type: "GET_RATING"};
+}
+export function getByRev() {
+    return { type: "GET_BY_REV"};
+}
 export function getVideoGame() {
     return async function(dispatch) {
         try {
