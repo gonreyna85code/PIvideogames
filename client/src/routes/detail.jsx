@@ -5,14 +5,18 @@ import icon from "../styles/home-create.png";
 import "../styles/detail.css";
 
 export default function Detail(props) {
-  const id = props.match.params.id;
-  const videogame = useSelector((state) => state.Videogame);
-  console.log(videogame)
-  const image = videogame.background_image;
+  const videogame = useSelector((state) => state.Videogame)
+  // const genres = useSelector((state) => state.Videogame.genres.map((e) => e.name).join(", "));
+  // const platforms = useSelector((state) => state.Videogame.platforms.map((e) => e.platform.name).join(", "));
   const dispatch = useDispatch();
+  
+  const id = props.match.params.id;
   useEffect(() => {
     dispatch(getVideoGameID(id));
-  }, [dispatch, id]);
+  }, [dispatch, id]);  
+  const image = videogame.background_image;
+  console.log(videogame)
+  
   return (
     <div>
       <div className="detail"> 
@@ -24,10 +28,33 @@ export default function Detail(props) {
         </a>
       </div>     
         <h1 className="detail_title">{videogame.name}</h1>
+        <div>
         <div className="img_container">
           <img className="det_img" src={image} width={400} alt="" />
         </div>
+        <div>
+          <h2 className="detail_subtitle">Rating</h2>
+          <p className="detail_text">{videogame.rating}</p>
+        </div>
+        <div>
+          <h2 className="detail_subtitle">Release Date</h2>
+          <p className="detail_text">{videogame.released}</p>
+        </div>     
+        <div>
+          <h2 className="detail_subtitle">Platforms</h2>
+          <div className="detail_text">{}</div>
+        </div>
+        <div>
+          <h2 className="detail_subtitle">Genres</h2>
+          <p className="detail_text">{}</p>
+        </div>
+        
+        </div>
         <div className="foot">          
+        </div>
+        <div>
+          <h2 className="detail_title">Description</h2>
+          <p className="detail_description">{videogame.description_raw}</p>
         </div>
       </div>
     </div>

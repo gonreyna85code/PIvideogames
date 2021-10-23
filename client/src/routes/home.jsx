@@ -19,6 +19,7 @@ export default function Home() {
         <a href="/create"  className='detail_icon'>
           <div>
           <img src={icon} alt="" width='60px' height='60px' className="detail_img"/>
+          Create Videogame
           </div>
         </a>
         <Navbar/>

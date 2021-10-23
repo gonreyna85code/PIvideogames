@@ -98,37 +98,3 @@
   color: silver;
   font-weight: bold;
 }
-input[type="search" i] {
-  background-color: transparent;
-  border-radius: 25px;
-  color: white;
-  width: 400px;
-  font-size: larger;
-}
-.search_home {
-  background-color: transparent;
-  color: silver;
-  border-radius: 20px;
-}
-.pager_container {
-  border-color: #5e5e5e;
-  display: flex;
-  color: #ffffff77;
-  font-size: large;
-  justify-content: center;
-  margin-top: 4%;
-  height: 35px;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: stretch;
-}
-.pager {
-  background-color: #141414;
-  border: 2px solid;
-  border-color: #5e5e5e;
-  width: 10%;
-  border-radius: 50px;
-  color: #ffffff77;
-  font-size: large;
-  font-weight: 600;
-}
