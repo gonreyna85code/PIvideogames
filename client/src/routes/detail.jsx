@@ -5,18 +5,16 @@ import icon from "../styles/home-create.png";
 import "../styles/detail.css";
 
 export default function Detail(props) {
-  const videogame = useSelector((state) => state.Videogame)
-  // const genres = useSelector((state) => state.Videogame.genres.map((e) => e.name).join(", "));
-  // const platforms = useSelector((state) => state.Videogame.platforms.map((e) => e.platform.name).join(", "));
+  const videogame = useSelector((state) => state.Videogames)
   const dispatch = useDispatch();
   
   const id = props.match.params.id;
   useEffect(() => {
     dispatch(getVideoGameID(id));
   }, [dispatch, id]);  
-  const image = videogame.background_image;
+  const image = videogame?.background_image;
   console.log(videogame)
-  
+  // usar el signo de pregunta para que no se ejecute la funcion si no hay un valor
   return (
     <div>
       <div className="detail"> 
@@ -27,7 +25,7 @@ export default function Detail(props) {
           </div>
         </a>
       </div>     
-        <h1 className="detail_title">{videogame.name}</h1>
+        <h1 className="detail_title">{videogame.name?.common}</h1>
         <div>
         <div className="img_container">
           <img className="det_img" src={image} width={400} alt="" />
