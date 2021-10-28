@@ -1,20 +1,18 @@
 import React, { useEffect } from "react";
 import { getVideoGameID } from "../redux/actions.js";
 import { useDispatch, useSelector } from "react-redux";
+import { RatingView } from 'react-simple-star-rating'
 import icon from "../styles/home-create.png";
 import "../styles/detail.css";
 
 export default function Detail(props) {
-  const videogame = useSelector((state) => state.Videogames)
-  const dispatch = useDispatch();
-  
+  const videogame = useSelector((state) => state.Videogame)
+  const dispatch = useDispatch();  
   const id = props.match.params.id;
   useEffect(() => {
     dispatch(getVideoGameID(id));
   }, [dispatch, id]);  
   const image = videogame?.background_image;
-  console.log(videogame)
-  // usar el signo de pregunta para que no se ejecute la funcion si no hay un valor
   return (
     <div>
       <div className="detail"> 
@@ -25,14 +23,14 @@ export default function Detail(props) {
           </div>
         </a>
       </div>     
-        <h1 className="detail_title">{videogame.name?.common}</h1>
+        <h1 className="detail_title">{videogame.name}</h1>
         <div>
         <div className="img_container">
           <img className="det_img" src={image} width={400} alt="" />
         </div>
         <div>
           <h2 className="detail_subtitle">Rating</h2>
-          <p className="detail_text">{videogame.rating}</p>
+          <p className="detail_text"><RatingView ratingValue={videogame.rating} /* RatingView Props */ /></p>
         </div>
         <div>
           <h2 className="detail_subtitle">Release Date</h2>
@@ -40,11 +38,19 @@ export default function Detail(props) {
         </div>     
         <div>
           <h2 className="detail_subtitle">Platforms</h2>
-          <div className="detail_text">{}</div>
+          <div className="detail_text">{videogame.platforms?.map((e) => (
+              <li key={e.platform.name} value={e.platform.name}>
+                {e.platform.name}
+              </li>
+            ))}</div>
         </div>
         <div>
           <h2 className="detail_subtitle">Genres</h2>
-          <p className="detail_text">{}</p>
+          <p className="detail_text">{videogame.genres?.map((e) => (
+              <li key={e.name} value={e.name}>
+                {e.name}
+              </li>
+            ))}</p>
         </div>
         
         </div>

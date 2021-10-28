@@ -29,7 +29,6 @@ export default function Create() {
       ...Videogame,
       database_created: true,
     });
-    console.log(Videogame);
     dispatch(postVideogame(Videogame));
     alert("Videogame created successfully");
   }
@@ -71,7 +70,7 @@ export default function Create() {
             id="genres"
             multiple
             size="6"
-            onChange={(e) =>
+            onClick={(e) =>
               setVideogame({
                 ...Videogame,
                 genres: [...Videogame.genres, { name: e.target.value }],
@@ -91,10 +90,10 @@ export default function Create() {
             id="platforms"
             multiple
             size="6"
-            onChange={(e) =>
+            onClick={(e) =>
               setVideogame({
                 ...Videogame,
-                platforms: [...Videogame.platforms, { name: e.target.value }],
+                platforms: [...Videogame.platforms, {platform:{ name: e.target.value }}],
               })
             }
           >

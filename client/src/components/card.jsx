@@ -5,14 +5,14 @@ import React from "react";
 export default function GameCard(props) {
     const { Titulo, Imagen } = props;
     return (
-        <div>
-           <li>
-           <img width={100}src={Imagen} alt="No imagen"/>
+        <div  className='card'>
+           <h4 className='card-title'>{Titulo}</h4>
+           <img width={200}src={Imagen} alt="No imagen" className="card-image"/>
            <div>
-              <h4>{Titulo}</h4>
+              
               
            </div>
-           </li>
+           
            
         </div>
     )

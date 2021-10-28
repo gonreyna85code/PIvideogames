@@ -33,17 +33,9 @@ export default function Videogames() {
     
     return (
         <div>
-            {Filtred_Videogame.length >= 15 ? (
-                <div>
-            <button className="button" onClick={first_Page}> {"<<"}</button>
-            <button className="button" onClick={prev_Page}> {"<"}</button>
-            <button className="button" onClick={next_Page}> {">"}</button>
-            <button className="button" onClick={last_Page}> {">>"}</button>
-            </div>
-            ): null}
-            <div>
+            <div className='cards'>
             {Filtred_Videogame.map((e)  => (
-                <Link key={e.id} to={"/videogame/" + e.id} > 
+                <Link key={e.id} to={e.database_created === 'true' ? "/videogame/" + e.id + 'db' : "/videogame/" + e.id} > 
             <GameCard
             ID = {e.ID}
             
@@ -52,6 +44,15 @@ export default function Videogames() {
             /></Link>
             ))}
           </div>
+            {Filtred_Videogame.length >= 15 ? (
+                <div  className='pager'>
+            <button className="pagerb" onClick={first_Page}> {"<<"}</button>
+            <button className="pagerb" onClick={prev_Page}> {"<"}</button>
+            <button className="pagerb" onClick={next_Page}> {">"}</button>
+            <button className="pagerb" onClick={last_Page}> {">>"}</button>
+            </div>
+            ): null}
+            
         </div>
     )
 }

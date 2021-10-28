@@ -22,7 +22,7 @@ export default function Filter() {
       dispatch(getGenres());
     }, [dispatch]);  
     return (
-       <div>
+       <div  className='allfilters'>
         <select  className="filtros" onChange={change} defaultValue="">
           <option key="0" value="" disabled hidden>
           &nbsp;&nbsp;SELECT GENRE:

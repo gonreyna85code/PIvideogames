@@ -19,16 +19,10 @@ const initialState = {
 
 function rootReducer(state = initialState, action) {
   if (action.type === GET_VIDEOGAMES) {
-    function dbid(e) {
-      if (e.database_created === "true") {
-        e.id = e.id + "db";
-      }
-      return e;
-    }
     return {
       ...state,
-      Videogames: action.payload.map(dbid),
-      Filtrados: action.payload.map(dbid),
+      Videogames: action.payload,
+      Filtrados: action.payload,
     };
   }
   if (action.type === GET_VIDEOGAME_ID) {

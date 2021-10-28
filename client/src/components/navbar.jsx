@@ -12,8 +12,8 @@ export default function Navbar() {
   return (
     <nav>
       <div className="navbar">
-        <input type="search" onKeyUp={e => (e.key === 'Enter') ? submit(e): null} onChange={e => setinput(e.target.value)} id="header-search" placeholder="  Search Breeds" /> 
-        <input type="submit" value="Search" onClick={submit}/>       
+        <input className='bar' type="search" onKeyUp={e => (e.key === 'Enter') ? submit(e): null} onChange={e => setinput(e.target.value)} id="header-search" placeholder="  Search Videogames" />
+        <input className='bar' type="submit" value="Search" onClick={submit}/>       
       </div>
       
     </nav>

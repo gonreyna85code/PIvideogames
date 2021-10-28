@@ -17,7 +17,6 @@ router.get("/videogame/:id", async (req, res) => {
     .catch((error) => {
       return res.status(404).send("ID invalida");
     });
-    console.log(game)
   res.json(game);
 });
 

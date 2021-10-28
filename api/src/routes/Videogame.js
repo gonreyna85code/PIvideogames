@@ -6,7 +6,6 @@ const router = Router();
 
 router.post("/videogame/", async (req, res) => {
   const game = req.body;
-  console.log(game);
   if (game.name === "") return res.status(505).send("Debe tener un nombre");
    await Videogames.create(game).catch((error) => {
       return res.send(error);
