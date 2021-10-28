@@ -14,7 +14,7 @@ export default function Detail(props) {
   }, [dispatch, id]);  
   const image = videogame?.background_image;
   return (
-    <div>
+    <div className='App Fade'>
       <div className="detail"> 
       <div>
         <a href="/home"  className='detail_icon'>

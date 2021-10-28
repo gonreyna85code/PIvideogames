@@ -13,6 +13,7 @@ export default function Home() {
     dispatch(getVideoGame());
   }, [dispatch]);
   return (
+    <div className='App Fade'>
     <div className="home">
       <a href="/create">
         <div className="detail_icon">
@@ -35,6 +36,7 @@ export default function Home() {
       <div>
         <Videogames />
       </div>
+    </div>
     </div>
   );
 }

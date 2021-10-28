@@ -36,6 +36,7 @@ export default function Create() {
     dispatch(getGenres());
   }, [dispatch]);
   return (
+    <div className='App Fade'>
     <div className="create">
       <div>
         <a href="/home" className="icon">
@@ -142,6 +143,7 @@ export default function Create() {
           <input type="submit" value="Create" className="create_button" />
         </div>
       </form>
+    </div>
     </div>
   );
 }
