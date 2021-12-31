@@ -1,43 +1,41 @@
 .create {
-    background-image: url("./home-background.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    padding-bottom: 100%;
-    overflow: hidden;
-    scroll-behavior: hidden;
+  background-image: url("./home-background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 100%;
+  overflow: hidden;
+  scroll-behavior: hidden;
+  color: grey;
+}
 
+.create-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
 
+.create h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
 
-
-
-
-
-
-
-    color: grey;
-  }
-
-  .create-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-  }
-
-  .create h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 30px;
-    color: #fff;
-    text-align: center;
-  }
- 
+.box{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}

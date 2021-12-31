@@ -47,6 +47,8 @@ export default function Create() {
       </div>
       <h1 className="create_title">Create New Videogame</h1>
       <form id="form" className="create_container" onSubmit={submit}>
+        <div className="box">
+        <div className="left-box">
         <div className="text_box">
           <div className="field">
             <label>Name:&nbsp;</label>
@@ -105,6 +107,9 @@ export default function Create() {
             ))}
           </select>
         </div>
+        
+        </div>
+        <div className="right-box">
         <div>
         <label>Release data:&nbsp;</label>
           <input
@@ -138,6 +143,9 @@ export default function Create() {
               setVideogame({ ...Videogame, description_raw: e.target.value })
             }
           ></textarea>
+        </div>
+        
+        </div>
         </div>
         <div>
           <input type="submit" value="Create" className="create_button" />
