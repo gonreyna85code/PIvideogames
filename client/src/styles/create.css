@@ -7,7 +7,8 @@
   padding-bottom: 100%;
   overflow: hidden;
   scroll-behavior: hidden;
-  color: grey;
+  color: #fff;
+  margin-top:15px;
 }
 
 .create-container {
@@ -22,6 +23,7 @@
   padding: 20px;
   box-sizing: border-box;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  margin-top:15px;
 }
 
 .create h1 {
@@ -30,12 +32,74 @@
   font-size: 30px;
   color: #fff;
   text-align: center;
+  margin-top:15px;
 }
 
-.box{
+.box {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-top: 10px;
+}
+
+.name {
+  background: transparent;
+  border-radius: 10px;
+  height: 30px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.genres {
+  background: transparent;
+  border-radius: 10px;
+  color: #fff;
+  height: 150px;
+  margin-top: 20px;
+}
+
+.platforms {
+  background: transparent;
+  border-radius: 10px;
+  height: 90px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.date {
+  background: transparent;
+  border-radius: 10px;
+  height: 30px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.rating {
+  background: transparent;
+  border-radius: 10px;
+  height: 30px;
+  width: 100px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.description {
+  background: transparent;
+  border-radius: 10px;
+  height: 172px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.butt {
+  height: 40px;
+  width: 80px;
+  background: #444444;
+  border-radius: 10px;
+  margin-top: 60px;
+}
+
+.iconC{
+  margin-top:15px;
 }

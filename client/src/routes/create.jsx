@@ -41,7 +41,7 @@ export default function Create() {
       <div>
         <a href="/home" className="icon">
           <div>
-            <img src={icon} width='60px' height='60px' alt="" className="img" />
+            <img className='iconC' src={icon} width='60px' height='60px' alt="" />
           </div>
         </a>
       </div>
@@ -53,6 +53,7 @@ export default function Create() {
           <div className="field">
             <label>Name:&nbsp;</label>
             <input
+            className="name"
               type="text"
               id="name"
               name="name"
@@ -70,6 +71,7 @@ export default function Create() {
         <div>
         <label>Genres:&nbsp;</label>
           <select
+          className="genres"
             id="genres"
             multiple
             size="6"
@@ -90,6 +92,7 @@ export default function Create() {
         <div>
         <label>Platforms:&nbsp;</label>
           <select
+          className="platforms"
             id="platforms"
             multiple
             size="6"
@@ -113,6 +116,7 @@ export default function Create() {
         <div>
         <label>Release data:&nbsp;</label>
           <input
+            className="date"
             type="date"
             onChange={(e) =>
               setVideogame({ ...Videogame, released: e.target.value })
@@ -122,6 +126,7 @@ export default function Create() {
         <div>
         <label>Rating:&nbsp;</label>
           <input
+            className="rating"
             type="number"
             min="1"
             max="5"
@@ -135,6 +140,7 @@ export default function Create() {
         <div>
         <label>Description:&nbsp;</label>
           <textarea
+            className="description"
             name="description"
             id="description"
             cols="30"
@@ -148,7 +154,7 @@ export default function Create() {
         </div>
         </div>
         <div>
-          <input type="submit" value="Create" className="create_button" />
+          <input className='butt' type="submit" value="Create"/>
         </div>
       </form>
     </div>
